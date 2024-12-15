@@ -1,0 +1,52 @@
+@use "_vars";
+
+.cta-button a {
+  display: inline-flex;
+  border: 2px solid vars.$color-dark;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 8px;
+  border-radius: 4px;
+  font-family: vars.$geist;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.cta-button--color-white a:hover {
+  background-color: #a78da4;
+}
+
+.cta-button--color-transparent a:hover {
+  background-color: #a78da4;
+}
+
+.cta-button--color-black a:hover {
+  background-color: #a78da4;
+}
+
+.cta-button--color-black a {
+  background-color: vars.$color-dark;
+  color: vars.$color-white;
+  transition: background-color 0.5s ease;
+}
+
+.cta-button--color-transparent a {
+  background-color: none;
+  transition: background-color 0.5s ease;
+}
+
+.cta-button--color-white a {
+  background-color: vars.$color-white;
+  transition: background-color 0.5s ease;
+}
+
+.hero-section__cta-button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dark-section .cta-button {
+  margin-bottom: 4.313rem;
+}

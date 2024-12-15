@@ -1,0 +1,287 @@
+@use "reset";
+@use "_vars";
+@use "_accordion";
+@use "_fonts";
+@use "_ctaBtns";
+@use "_hamburger-menu";
+
+//default styles
+body {
+  background-color: vars.$color-light;
+  font-family: vars.$spline-sans;
+}
+
+a {
+  color: vars.$color-dark;
+  text-decoration: none;
+}
+
+//styles for nav
+
+.nav {
+  align-items: center;
+}
+
+.nav .nav__logo img {
+  height: 24px;
+}
+
+.nav .nav__logo {
+  display: inline-block;
+}
+
+//styles for hero section
+
+.hero-section {
+  padding-bottom: 5.125rem;
+  padding-top: 2.813rem;
+}
+
+.hero-section p {
+  font-family: vars.$geist;
+  font-weight: 500;
+  margin-bottom: 1.438rem;
+}
+
+.header {
+  font-size: 2.75rem;
+  font-weight: 400;
+}
+
+.header__inline-elem {
+  display: inline-block;
+}
+
+.header__inline-elem__img {
+  width: 46px;
+  height: 32px;
+}
+
+h1 {
+  margin-bottom: 1.813rem;
+}
+
+h4 {
+  font-family: vars.$geist;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.688rem;
+}
+
+//styles for dark section
+
+.dark-section {
+  background-color: vars.$color-dark;
+  padding-top: 74px;
+  width: 100%;
+}
+
+.dark-section h2 {
+  font-size: 2rem;
+  color: vars.$color-white;
+  font-weight: 400;
+  max-width: 23.5rem;
+  margin-bottom: 1.438rem;
+}
+
+.ratio-box {
+  padding-top: 73%;
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 3.25rem;
+}
+
+.ratio-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+
+p {
+  line-height: 150%;
+}
+
+.dark-section p {
+  font-family: vars.$geist;
+  font-weight: 400;
+  color: vars.$color-white;
+  font-size: 14px;
+  max-width: 25.875rem;
+  margin-bottom: 1.438rem;
+}
+
+.dark-section__content-block {
+  padding-bottom: 4.625rem;
+}
+
+.wrapper {
+  width: 87.5%;
+  margin: 0 auto;
+}
+
+.inner-wrapper {
+  width: 88%;
+  max-width: 69.188rem;
+  margin: 0 auto;
+}
+
+//Applied in browsers that do not support the :focus-visible pseudo-class.
+:focus {
+  outline: 3px solid #3e3e3e;
+}
+
+//Elements that do not qualify for focus visibility are set to 'outline: none'.
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+//Applied to the elements on the keyboard tab for improved accessibility
+:focus-visible,
+.accordion-header:focus-visible {
+  outline: 3px solid #3e3e3e;
+  outline-offset: 3px;
+}
+
+@media only screen and (min-width: 744px) {
+  .nav__hamburger-menu {
+    display: none;
+  }
+
+  .header {
+    font-size: 3.5rem;
+  }
+
+  .dark-section h2 {
+    font-size: 2.75rem;
+    color: vars.$color-white;
+  }
+
+  .dark-section p {
+    font-size: 16px;
+    color: vars.$color-white;
+  }
+
+  .accordion-header {
+    font-size: 1.125rem;
+  }
+}
+
+@media only screen and (min-width: 1512px) {
+  .header {
+    font-size: 6.75rem;
+  }
+
+  .ratio-box {
+    margin-bottom: 0px;
+  }
+
+  .two-column-container {
+    width: 82.063rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 7.438rem;
+  }
+
+  .ratio-box {
+    padding-top: 0;
+    height: 32.75rem;
+    width: 44.5rem;
+  }
+
+  .header__inline-elem__img {
+    width: 81px;
+    height: 58.58px;
+  }
+
+  .inner-wrapper {
+    text-align: center;
+  }
+
+  h1 {
+    margin-bottom: 3.25rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-section p {
+    font-size: 18px;
+    margin-bottom: 2rem;
+  }
+
+  .hero-section__message {
+    text-align: center;
+    max-width: 36.5rem;
+    margin: 0 auto;
+  }
+
+  .hero-section__cta-button-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .dark-section h2,
+  .dark-section p {
+    margin-bottom: 2rem;
+  }
+
+  .dark-section .cta-button {
+    margin-bottom: 8.5rem;
+  }
+
+  .dark-section__content-block {
+    padding-bottom: 0;
+  }
+
+  .dark-section {
+    padding-top: 5.75rem;
+    padding-bottom: 5.75rem;
+  }
+
+  .hero-section {
+    padding-top: 7.375rem;
+    padding-bottom: 5.375rem;
+  }
+
+  .wrapper {
+    width: 100%;
+  }
+
+  .nav .nav__logo img {
+    height: 40px;
+  }
+
+  .nav .cta-button {
+    display: block;
+  }
+
+  .off-screen-menu {
+    all: unset;
+  }
+
+  .off-screen-menu__list-items {
+    flex-direction: row;
+    font-size: 16px;
+    padding: 0;
+  }
+
+  .off-screen-menu__list-items li:hover {
+    border-bottom: 1px solid vars.$color-dark;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 91%;
+    margin: 0 auto;
+    padding: 1.25rem;
+  }
+}

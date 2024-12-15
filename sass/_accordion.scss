@@ -1,0 +1,39 @@
+@use "vars";
+
+.accordion-header {
+  border-bottom: 1px solid #3e3e3e;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  justify-content: space-between;
+  background-color: vars.$color-dark;
+  color: vars.$color-white;
+  cursor: pointer;
+  padding: 12px;
+  width: 100%;
+  outline: none;
+  display: inline-flex;
+  text-align: center;
+  font-family: vars.$geist;
+  font-weight: 400;
+  font-size: 16px;
+  transition: background-color 0.5s ease;
+}
+
+.active,
+.accordion-header:hover {
+  background-color: #252525;
+}
+
+.accordion-panel {
+  padding: 0 12px;
+  background-color: vars.$color-dark;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion-panel p {
+  padding-top: 32px;
+  line-height: 150%;
+}
